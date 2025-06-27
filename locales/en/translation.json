@@ -1,0 +1,12 @@
+{
+  "missing_fields": "All fields are required",
+  "password_mismatch": "Passwords do not match",
+  "email_exists": "Email already exists",
+  "phone_exists": "Phone number already exists",
+  "register_success": "Registration successful",
+  "missing_credentials": "Please provide email and password",
+  "invalid_credentials": "Invalid email or password",
+  "login_success": "Login successful",
+  "user_not_found": "User not found",
+  "server_error": "Server error"
+}

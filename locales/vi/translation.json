@@ -1,0 +1,12 @@
+{
+  "missing_fields": "Vui lòng nhập đầy đủ các trường",
+  "password_mismatch": "Mật khẩu không khớp",
+  "email_exists": "Email đã tồn tại",
+  "phone_exists": "Số điện thoại đã tồn tại",
+  "register_success": "Đăng ký thành công",
+  "missing_credentials": "Vui lòng cung cấp email và mật khẩu",
+  "invalid_credentials": "Mật khẩu không đúng",
+  "login_success": "Đăng nhập thành công",
+  "user_not_found": "Người dùng không tồn tại",
+  "server_error": "Lỗi server"
+}
