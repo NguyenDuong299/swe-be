@@ -1,7 +1,6 @@
-// src/middlewares/i18n.ts
 import i18next from "i18next";
-import Backend from "i18next-fs-backend";
 import middleware from "i18next-http-middleware";
+import Backend from "i18next-fs-backend";
 import path from "path";
 
 i18next
@@ -15,4 +14,4 @@ i18next
     },
   });
 
-export default middleware.handle(i18next);
+export const i18nMiddleware = middleware.handle(i18next);

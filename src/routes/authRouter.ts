@@ -1,24 +1,8 @@
 import express, { Request, Response } from "express";
 import bcrypt from "bcrypt";
 import User from "../models/user";
-import middleware from "i18next-http-middleware";
-import i18next from "i18next";
-import Backend from "i18next-fs-backend";
-import path from "path";
 
 const router = express.Router();
-
-i18next
-  .use(Backend)
-  .use(middleware.LanguageDetector)
-  .init({
-    fallbackLng: "en",
-    preload: ["en", "vi"],
-    backend: {
-      loadPath: path.join(__dirname, "../../locales/{{lng}}/translation.json"),
-    },
-  });
-router.use(middleware.handle(i18next));
 router.post("/register", async (req: Request, res: Response) => {
   try {
     const { firstName, lastName, email, phone, password, confirmPassword } = req.body;

@@ -1,13 +1,12 @@
 import express, { Request, Response } from "express";
 import { sequelize } from "./config/database";
-import userRouter from "./routes/authRouter";
+import authRouter from "./routes/authRouter";
 import "./models/user";
-import i18nMiddleware from "./middlewares/i18n";
 import cors from "cors";
-const router = express.Router();
+import { i18nMiddleware } from "./middlewares/i18n";
+
 const app = express();
 const port = 8080;
-router.use(express.json()); 
 
 app.use(
   cors({
@@ -15,10 +14,9 @@ app.use(
     credentials: true,
   })
 );
-
 app.use(i18nMiddleware);
 app.use(express.json());
-app.use("/api", userRouter);
+app.use("/api", authRouter);
 
 app.get("/", (req: Request, res: Response) => {
   res.send("Hello, TypeScript Node.js API!");
